@@ -3,7 +3,7 @@ import { Todo } from './model/todo.model';
 
 const stateInitial: Todo[] = [];
 
-export const todoReducer = (state = stateInitial, action: act.Actions): Todo[] => {
+export function todoReducer(state = stateInitial, action: act.Actions): Todo[] {
     switch (action.type) {
         case act.ADD_TODO:
             const todo = new Todo(action.texto);
